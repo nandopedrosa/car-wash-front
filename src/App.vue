@@ -1,16 +1,12 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import SidebarLayout from '@/components/SidebarLayout.vue'
 </script>
 
 <template>
-  <header>    
-    <div class="wrapper">      
-        <RouterLink to="/">Home</RouterLink>
-    </div>
-  </header>
-
-  <RouterView />
+  <SidebarLayout/>
 </template>
+
 
 <style scoped>
 
