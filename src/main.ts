@@ -1,17 +1,17 @@
 // Core Imports
-import { createApp } from 'vue'
+import i18n from '@/i18n/i18n'
 import { createPinia } from 'pinia'
+import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 
 // Prime Vue imports
-import PrimeVue from 'primevue/config'
 import Accordion from 'primevue/accordion'
 import AccordionTab from 'primevue/accordiontab'
 import Avatar from 'primevue/avatar'
 import AvatarGroup from 'primevue/avatargroup'
-import BadgeDirective from 'primevue/badgedirective'
 import Badge from 'primevue/badge'
+import BadgeDirective from 'primevue/badgedirective'
 import Button from 'primevue/button'
 import Calendar from 'primevue/calendar'
 import Carousel from 'primevue/carousel'
@@ -19,6 +19,7 @@ import Checkbox from 'primevue/checkbox'
 import Chip from 'primevue/chip'
 import Chips from 'primevue/chips'
 import Column from 'primevue/column'
+import PrimeVue from 'primevue/config'
 import DataTable from 'primevue/datatable'
 import DataView from 'primevue/dataview'
 import Dialog from 'primevue/dialog'
@@ -40,27 +41,29 @@ import ProgressBar from 'primevue/progressbar'
 import RadioButton from 'primevue/radiobutton'
 import Rating from 'primevue/rating'
 import Ripple from 'primevue/ripple'
+import SelectButton from 'primevue/selectbutton'
 import Sidebar from 'primevue/sidebar'
 import Slider from 'primevue/slider'
-import SelectButton from 'primevue/selectbutton'
 import StyleClass from 'primevue/styleclass'
 import TabMenu from 'primevue/tabmenu'
 import TabPanel from 'primevue/tabpanel'
 import TabView from 'primevue/tabview'
 import Tag from 'primevue/tag'
 import Textarea from 'primevue/textarea'
-import ToggleButton from 'primevue/togglebutton'
-import Tooltip from 'primevue/tooltip'
 import Toast from 'primevue/toast'
 import ToastService from 'primevue/toastservice'
+import ToggleButton from 'primevue/togglebutton'
+import Tooltip from 'primevue/tooltip'
 
+import 'primeflex/primeflex.css'
+import 'primeicons/primeicons.css'
+import 'primevue/resources/primevue.min.css'
 import 'primevue/resources/themes/md-light-indigo/theme.css'
-import 'primevue/resources/primevue.min.css';
-import 'primeflex/primeflex.css';
-import 'primeicons/primeicons.css';
 
 const app = createApp(App)
 
+//Registering plugins
+app.use(i18n)
 app.use(createPinia())
 app.use(ToastService)
 app.use(router)
