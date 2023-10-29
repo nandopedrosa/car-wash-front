@@ -17,11 +17,11 @@ function updatePageTitle(newPageTitle: string) {
       style="width: 280px"
     >
       <div class="flex flex-column h-full">
-        <div class="flex align-items-center px-5 flex-shrink-0" style="height: 60px">
-          <img src="images/hyper-700.svg" alt="Image" height="30" />
+        <div class="flex align-items-center px-5 pt-3 flex-shrink-0" style="height: 60px">
+          <img src="images/logo.png" alt="Image" height="120" />
         </div>
         <div class="overflow-y-auto">
-          <ul class="list-none pt-3 pl-3 pr-3 pb-1 m-0">
+          <ul class="list-none pt-5 pl-3 pr-3 pb-1 m-0">
             <li>
               <a
                 v-ripple
@@ -55,7 +55,7 @@ function updatePageTitle(newPageTitle: string) {
                     v-ripple
                     class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple"
                   >
-                    <i class="pi pi-desktop mr-2"></i>
+                    <i class="pi pi-car mr-2"></i>
                     <span class="font-medium">{{ $t('nav.company') }}</span>
                   </a>
                 </li>
@@ -73,8 +73,8 @@ function updatePageTitle(newPageTitle: string) {
                     v-ripple
                     class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple"
                   >
-                    <i class="pi pi-bookmark mr-2"></i>
-                    <span class="font-wrench">{{ $t('nav.serviceTypes') }}</span>
+                    <i class="pi pi-wrench mr-2"></i>
+                    <span class="font-medium">{{ $t('nav.serviceTypes') }}</span>
                   </a>
                 </li>
                 <li>
@@ -94,48 +94,37 @@ function updatePageTitle(newPageTitle: string) {
     </div>
     <div class="min-h-screen flex flex-column relative flex-auto">
       <div
-        class="flex justify-content-between align-items-center px-5 surface-0 border-bottom-1 surface-border relative lg:static"
+        class="flex justify-content-between align-items-center px-3 surface-0 border-bottom-1 surface-border relative lg:static"
         style="height: 60px"
       >
-        <div class="flex">
-          <a
-            v-ripple
-            class="cursor-pointer block lg:hidden text-700 mr-3 mt-1 p-ripple"
-            v-styleclass="{
-              selector: '#app-sidebar-1',
-              enterClass: 'hidden',
-              enterActiveClass: 'fadeinleft',
-              leaveToClass: 'hidden',
-              leaveActiveClass: 'fadeoutleft',
-              hideOnOutsideClick: true
-            }"
-          >
-            <i class="pi pi-bars text-4xl"></i>
-          </a>
-          <span class="p-input-icon-left">
-            <h2>{{ pageTitle }}</h2>
-          </span>
-        </div>
         <a
           v-ripple
-          class="cursor-pointer block lg:hidden text-700 p-ripple"
+          class="cursor-pointer block lg:hidden text-700 mr-3 mt-1 p-ripple"
           v-styleclass="{
-            selector: '@next',
+            selector: '#app-sidebar-1',
             enterClass: 'hidden',
-            enterActiveClass: 'fadein',
+            enterActiveClass: 'fadeinleft',
             leaveToClass: 'hidden',
-            leaveActiveClass: 'fadeout',
+            leaveActiveClass: 'fadeoutleft',
             hideOnOutsideClick: true
           }"
         >
-          <i class="pi pi-ellipsis-v text-2xl"></i>
+          <i class="pi pi-bars text-4xl"></i>
         </a>
+        <ul
+          class="list-none p-3 m-0 surface-card flex align-items-center font-medium overflow-x-auto"
+        >
+          <li class="px-2">
+            <span class="text-600 white-space-nowrap">{{ pageTitle }}</span>
+          </li>
+        </ul>
+
         <ul
           class="list-none p-0 m-0 hidden lg:flex lg:align-items-center select-none lg:flex-row surface-section border-1 lg:border-none surface-border right-0 top-100 z-1 shadow-2 lg:shadow-none absolute lg:static"
         >
           <li class="border-top-1 surface-border lg:border-top-none">
             <RouterLink class="no-underline" to="/">
-              <div class="block mr-2">
+              <div class="block mr-4">
                 <div class="text-900 font-medium">Fernando Pedrosa</div>
                 <span class="text-600 font-medium text-sm">fpedrosa@gmail.com</span>
               </div>
